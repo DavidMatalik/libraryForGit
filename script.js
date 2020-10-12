@@ -56,8 +56,6 @@ function throwErrorMesage() {
 
 function showBooksOfLibrary () {
 
-    
-
     dbRefObj.on('value', snap => {
         table.innerHTML = '';
         snap.forEach((book) => {
