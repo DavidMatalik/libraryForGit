@@ -1,0 +1,53 @@
+body{
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+}
+
+#formTable td{
+    text-align: left;
+    padding-right: 20px;
+}
+
+#bookTable td, #bookTable th{
+    border-color: green;
+    border-style: solid;
+    border-width: 2px;
+    padding: 2px;
+    text-align: center;
+}
+
+th{
+    font-weight: bold;
+}
+
+#newBook, #createBook{
+    margin-top: 30px;
+    background-color: orange;
+    padding: 2px;
+    border: 1px grey solid;
+}
+
+#bookFormContainer{
+    display: none;
+}
+
+#errorMessage{
+    display: none;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.deleteButton{
+    background-color:lightgrey;
+    margin-left: 10px;
+}
+
+.readButton{
+    background-color:lightgrey;
+    margin-left: 10px;
+    float: right;
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Library</title>
+
+    <link rel="stylesheet" type="text/css" href="reset.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!--<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    
+</head>
+
+<body>
+    <div id="bookFormContainer">
+        <div id="errorMessage">Enter a valid value in all fields. Then press Create Book.</div>
+        <form id="bookForm">
+            <table id="formTable">
+                <tr>
+                    <td><label for="bookTitle">Title:</label></td>
+                    <td><input id="bookTitle" type="text" name="bookTitle"></td>
+                </tr>
+                <tr>
+                    <td><label for="bookAuthor">Author:</label></td>
+                    <td><input id="bookAuthor" type="text" name="bookAuthor"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="bookPages">Pages:</label></td>
+                    <td><input id="bookPages" type="number" name="bookPages"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="bookRead">Read the book?</label></td>
+                    <td><select id="bookRead" name="bookRead">
+                        <option value=true>Book read</option>
+                        <option value=false>Book not read</option>    
+                    </select></td>
+                </tr>
+            </table>
+        </form>
+        <button id="createBook">Create Book</button>
+    </div>
+
+    <div id="bookTableContainer">
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                </tr>
+            </thead>
+            <tbody id="table-data">
+
+            </tbody>
+        </table>
+        <button id="newBook">New Book</button>
+    </div>
+
+    <p id="object"></p>
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first
+    <script src="/__/firebase/7.22.0/firebase-app.js"></script>-->
+
+    <!-- SDK for Realtime Database
+    <script src="/__/firebase/7.22.1/firebase-database.js"></script>-->
+
+    <!-- Initialize Firebase
+    <script src="/__/firebase/init.js"></script>-->
+
+    <!--<script src="firebase.js"></script>-->
+
+</body>
+
+</html>
