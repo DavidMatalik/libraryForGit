@@ -1,10 +1,16 @@
-# library
+# Learning Goals:
 
-Todos: 
+Use Constructer Function
 
-1. Define rules for Database. After 30 days there is no longer public access to database. 
+Use Objects
 
-2. Make library faster: At the moment if there is a book added or deleted every book is loaded fresh. Would be better if only with the book deleted or created something is done in the background.
+Use Google's Firebase Realtime Database
 
-3. Style library nicer: Put "New Book"-Button on Top. 
+# Todos: 
+
+Define rules for Database - after 30 days there is no longer public access to database
+
+Make library faster - if there is a book added or deleted every book is refreshed - refresh only book deleted or created 
+
+Style library nicer - put "New Book"-Button on Top - and more
 
