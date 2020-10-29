@@ -10,11 +10,13 @@ const table = document.getElementById('table-data');
 const errorDiv = document.querySelector('#errorMessage');
 let dbRefObj;
 
-function Book(title, author, pages, read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+class Book {
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 newBookButton.addEventListener('click', showBookForm);
