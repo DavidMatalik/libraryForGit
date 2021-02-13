@@ -1,5 +1,45 @@
-body{
-    text-align: center;
+/* Put a library heading h1 and put New Book Button next to it 
+   Add a plus sign into new Book button
+   Make Changse Status Button look good
+   Change delete button into trash icon
+   Give cards a background color
+   Style the new Book form */
+
+#bookContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}
+
+.bookCard {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 1vw;
+  padding-left: 2vw;
+  margin: 1vw;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+h2 {
+  font-weight: bold;
+  display: inline;
+}
+
+.toogleActive{
+  border: solid 1px black;
+  background-color: black;
+  color: white;
+  
+}
+
+.deleteContainer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.fa:hover {
+  cursor:pointer;
 }
 
 table{
@@ -40,14 +80,9 @@ th{
     margin-bottom: 20px;
 }
 
-.deleteButton{
-    background-color:lightgrey;
-    margin-left: 10px;
-}
-
 .readButton{
-    background-color:lightgrey;
-    margin-left: 10px;
-    float: right;
+    width: 50px;
+    line-height: 100%;
+    border: solid 1px black;
 }
 
