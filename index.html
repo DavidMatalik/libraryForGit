@@ -16,7 +16,7 @@
     <div id="blurContainer"></div>
     <h1>My Library</h1>
 
-    <div id="bookFormContainer">
+    <!-- <div id="bookFormContainer">
       <div id="errorMessage">Enter a valid value in all fields. Then press Create Book.</div>
       <form id="bookForm">
           <table id="formTable">
@@ -42,6 +42,28 @@
                   </select></td>
               </tr>
           </table>
+      </form>
+      <button id="createBook">Create Book</button>
+    </div> -->
+
+    <div id="bookFormContainer">
+      <div id="errorMessage">Enter a valid value in all fields. Then press Create Book.</div>
+      <form id="bookForm">
+                  <label for="bookTitle">Title:</label>
+                  <input id="bookTitle" type="text" name="bookTitle">
+
+                  <label for="bookAuthor">Author:</label>
+                  <input id="bookAuthor" type="text" name="bookAuthor">
+
+                  <label for="bookPages">Pages:</label>
+                  <input id="bookPages" type="number" name="bookPages">
+
+                  <label for="bookRead">Read the book?</label>
+                  <br>
+                  <select id="bookRead" name="bookRead">
+                      <option value=true>Yes</option>
+                      <option value=false>No</option>    
+                  </select>
       </form>
       <button id="createBook">Create Book</button>
     </div>

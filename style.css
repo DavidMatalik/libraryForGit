@@ -48,7 +48,6 @@ h1{
   padding: 0;
 }
 
-
 h2 {
   font-weight: bold;
   display: inline;
@@ -64,7 +63,6 @@ h2 {
 .deleteContainer {
   margin-top: 10px;
   text-align: center;
-  vertical-align: bottom;
 }
 
 .fa:hover {
@@ -81,10 +79,6 @@ h2 {
   z-index: 2;
 }
 
-table{
-    margin: 0 auto;
-}
-
 #bookFormContainer{
   position: absolute;
   top: 50vh;
@@ -95,7 +89,7 @@ table{
   padding-right: 25vw; 
   padding-left: 25vw;
   padding-top: 15vh;
-  padding-bottom: 15vh;
+  padding-bottom: 5vh;
   border: 1px solid black;
   border-radius: 15px;
   font-size: 20px;
@@ -104,28 +98,14 @@ table{
   display: none;
 }
 
-#formTable td{
-    text-align: left;
-    padding-right: 20px;
-}
-
-#bookTable td, #bookTable th{
-    border-color: green;
-    border-style: solid;
-    border-width: 2px;
-    padding: 2px;
-    text-align: center;
-}
-
-th{
-    font-weight: bold;
-}
-
 #createBook{
-    margin-top: 30px;
-    background-color: orange;
+    display: block;
+    background-color: rgba(226, 120, 2, 1);;
     padding: 2px;
     border: 1px grey solid;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 5px;
 }
 
 #errorMessage{
@@ -138,5 +118,13 @@ th{
     width: 50px;
     line-height: 100%;
     border: solid 1px black;
+}
+
+select{
+  font-size: 20px;
+}
+
+input {
+  width: 300px;
 }
 
