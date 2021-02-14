@@ -71,6 +71,16 @@ h2 {
   cursor:pointer;
 }
 
+#blurContainer{
+  position: absolute;
+  margin-top: -20px;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgba(106, 73, 43, 0.7);
+  display: none;
+  z-index: 2;
+}
+
 table{
     margin: 0 auto;
 }

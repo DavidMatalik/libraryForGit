@@ -8,6 +8,7 @@ const bookPagesInput = document.querySelector('#bookPages');
 const bookReadInput = document.querySelector('#bookRead');
 const bookContainer = document.getElementById('bookContainer');
 const errorDiv = document.querySelector('#errorMessage');
+const blurContainer = document.querySelector('#blurContainer');
 let dbRefObj;
 
 class Book {
@@ -24,6 +25,7 @@ createBookButton.addEventListener('click', createNewBook);
 
 function showBookForm() {
   bookFormContainer.style.display = 'block';
+  blurContainer.style.display = 'block';
   // bookContainer.style.display = 'none';
 }
 
@@ -38,6 +40,7 @@ function createNewBook() {
     showBooksOfLibrary();
 
     bookFormContainer.style.display = 'none';
+    blurContainer.style.display = 'none';
 
     resetForm();
   }
