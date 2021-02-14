@@ -1,16 +1,8 @@
-/* Put a library heading h1 and put New Book Button next to it 
-   Add a plus sign into new Book button
-   Make Changse Status Button look good
-   Change delete button into trash icon
-   Give cards a background color
-   Style the new Book form */
-
 body{
   position: relative;
   background: url("img/books.jpg") center no-repeat;
 }
 
-/* Adjust heading color a bit */
 h1{
   font-size: 400%;
   font-weight: bold;
@@ -30,7 +22,6 @@ h1{
   display: block;
 }
 
-/* Adjust cards color a bit. Greyish? */
 .bookCard, #newBook {
   border: 1px solid black;
   border-radius: 15px;
@@ -57,7 +48,6 @@ h2 {
   border: solid 1px black;
   background-color: black;
   color: white;
-  
 }
 
 .deleteContainer {
@@ -80,10 +70,6 @@ h2 {
 }
 
 #bookFormContainer{
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
   background-color:rgba(106, 73, 43, 1);
   z-index: 5;
   padding-right: 25vw; 
@@ -96,6 +82,11 @@ h2 {
   line-height: 150%;
   color: white;
   display: none;
+  /* from https://css-tricks.com/centering-css-complete-guide/ */
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
 }
 
 #createBook{
