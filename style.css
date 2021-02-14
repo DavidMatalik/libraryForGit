@@ -5,6 +5,21 @@
    Give cards a background color
    Style the new Book form */
 
+body{
+  position: relative;
+  background: url("img/books.jpg") center no-repeat;
+}
+
+/* Adjust heading color a bit */
+h1{
+  font-size: 400%;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  color: #e27802;
+  text-shadow: 2px 2px #6a492b;
+} 
+
 #bookContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -15,6 +30,7 @@
   display: block;
 }
 
+/* Adjust cards color a bit. Greyish? */
 .bookCard, #newBook {
   border: 1px solid black;
   border-radius: 15px;
@@ -23,6 +39,8 @@
   margin: 1vw;
   font-size: 20px;
   line-height: 150%;
+  background: rgba(226, 120, 2, 0.8);
+  color: white;
 }
 
 #newBook{
@@ -57,6 +75,25 @@ table{
     margin: 0 auto;
 }
 
+#bookFormContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(106, 73, 43, 1);
+  z-index: 5;
+  padding-right: 25vw; 
+  padding-left: 25vw;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 20px;
+  line-height: 150%;
+  color: white;
+  display: none;
+}
+
 #formTable td{
     text-align: left;
     padding-right: 20px;
@@ -79,10 +116,6 @@ th{
     background-color: orange;
     padding: 2px;
     border: 1px grey solid;
-}
-
-#bookFormContainer{
-    display: none;
 }
 
 #errorMessage{

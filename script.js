@@ -24,7 +24,7 @@ createBookButton.addEventListener('click', createNewBook);
 
 function showBookForm() {
   bookFormContainer.style.display = 'block';
-  bookContainer.style.display = 'none';
+  // bookContainer.style.display = 'none';
 }
 
 function createNewBook() {
@@ -38,7 +38,6 @@ function createNewBook() {
     showBooksOfLibrary();
 
     bookFormContainer.style.display = 'none';
-    bookContainer.style.display = 'block';
 
     resetForm();
   }
