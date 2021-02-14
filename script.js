@@ -6,7 +6,6 @@ const bookTitleInput = document.querySelector('#bookTitle');
 const bookAuthorInput = document.querySelector('#bookAuthor');
 const bookPagesInput = document.querySelector('#bookPages');
 const bookReadInput = document.querySelector('#bookRead');
-// const table = document.getElementById('table-data');
 const bookContainer = document.getElementById('bookContainer');
 const errorDiv = document.querySelector('#errorMessage');
 let dbRefObj;
@@ -25,7 +24,7 @@ createBookButton.addEventListener('click', createNewBook);
 
 function showBookForm() {
   bookFormContainer.style.display = 'block';
-  bookTableContainer.style.display = 'none';
+  bookContainer.style.display = 'none';
 }
 
 function createNewBook() {
@@ -39,7 +38,7 @@ function createNewBook() {
     showBooksOfLibrary();
 
     bookFormContainer.style.display = 'none';
-    bookTableContainer.style.display = 'block';
+    bookContainer.style.display = 'block';
 
     resetForm();
   }
@@ -60,21 +59,13 @@ function throwErrorMesage() {
 function showBooksOfLibrary() {
 
   dbRefObj.on('value', snap => {
-    bookContainer.innerHTML = '';
+    document.querySelectorAll('.book').forEach(element => element.remove())
     snap.forEach((book) => {
+      const bookDiv = document.createElement('div');
+      bookDiv.classList.add('bookCard');
+      bookDiv.classList.add('book');
 
-      /*  let markup = `
-       <tr>
-           <td>${book.val().title}</td>
-           <td>${book.val().author}</td>
-           <td>${book.val().pages}</td>
-           <td>${(book.val().read === 'true') ? 'Book read' : 'Book not read'}
-           <button class='readButton' data-key='${book.key}' onclick='updateReadStatus(this)'>Change</button></td>
-           <td><button class='deleteButton' data-key='${book.key}'>Delete</button></td>
-       </tr>
-       ` */
       let markup = `
-            <div class='bookCard'>
                 <p><h2>Title:</h2> ${book.val().title}</p>
                 <p><h2>Author:</h2> ${book.val().author}</p>
                 <p><h2>Pages:</h2> ${book.val().pages}</p>
@@ -86,13 +77,13 @@ function showBooksOfLibrary() {
                   data-key='${book.key}' onclick='updateReadStatus(this)'>No</button>
                 </p>
                 <p class='deleteContainer'><i class='deleteButton fa fa-trash fa-2x' data-key='${book.key}'></i></p>
-            </div>
             `
-
-      bookContainer.innerHTML += markup;
+      bookDiv.innerHTML = markup;
+      bookContainer.insertAdjacentElement('beforeend', bookDiv);
     });
     makeDeleteReady();
-  });
+    newBookButton.style.display = 'block';
+  });  
 }
 
 function makeDeleteReady() {
